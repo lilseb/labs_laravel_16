@@ -45,4 +45,10 @@ class User extends Authenticatable
     public function role(){
         return $this->belongsTo(Role::class);
     }
+
+    public function poste(){
+        return $this->belongsTo(Poste::class);
+    }
+
 }
+
