@@ -7,7 +7,7 @@
             </div>
             <div class="col-md-9">
                 <!-- newsletter form -->
-                {{-- <form action="{{route('newsletter.store')}}" method="POST" class="nl-form">
+                <form action="{{route('newsletter.store')}}" method="POST" class="nl-form">
                     @csrf
                     <input type="hidden" name="newsletterForStore" id="newsletterForStore">
                     <input type="email" id="mail" name="mail" placeholder="Your e-mail here">
@@ -17,7 +17,7 @@
                     </span>
                     @enderror        
                     <button type="submit" class="site-btn btn-2">Newsletter</button>
-                </form> --}}
+                </form>
             </div>
         </div>
     </div>

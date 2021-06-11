@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             CardServiceSeeder::class,
             CardAboutSectionSeeder::class,
             AboutSectionSeeder::class,
+            ServiceSeeder::class,
             UserSeeder::class,
         ]);
     }

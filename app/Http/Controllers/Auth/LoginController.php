@@ -30,4 +30,5 @@ class LoginController extends Controller
             return back()->with("fail","No email in DB");
         }
     }
+    
 }

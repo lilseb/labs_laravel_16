@@ -22,11 +22,11 @@
 
 </head>
 <body>
-    @include('frontend.partial.preloader')
-	@include('frontend.partial.navbar')
+    @include('frontend.contents.partial.preloader')
+	@include('frontend.contents.partial.navbar')
 
     @yield('content')
-    @include('frontend.partial.footer')
+    @include('frontend.contents.partial.footer')
     
     
     <!--====== Javascripts & Jquery ======-->

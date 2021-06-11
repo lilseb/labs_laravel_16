@@ -15,6 +15,13 @@ class CreateContactSectionsTable extends Migration
     {
         Schema::create('contact_sections', function (Blueprint $table) {
             $table->id();
+            $table->string('titre_contact');
+            $table->text('texte_contact');
+            $table->string('info_contact');
+            $table->string('adresse_contact');
+            $table->string('commune_contact');
+            $table->string('numero_contact');
+            $table->string('email');
             $table->timestamps();
         });
     }
@@ -26,17 +33,7 @@ class CreateContactSectionsTable extends Migration
      */
     public function down()
     {
-        Schema::create('contact_sections', function (Blueprint $table) {
-            $table->id();
-            $table->string('titre_contact');
-            $table->text('texte_contact');
-            $table->string('info_contact');
-            $table->string('adresse_contact');
-            $table->string('commune_contact');
-            $table->string('numero_contact');
-            $table->string('email');
-            $table->timestamps();
-        });
+        Schema::dropIfExists('contact_sections');
 
     }
 }

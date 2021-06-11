@@ -42,11 +42,6 @@ Route::get('/blog/post', function () {
 })->name('blog-post');
 
 
-
-
-
-
-
 Route::get('auth/register', [AllAuthController::class , 'register'])->name('register.index');
 Route::get('auth/login', [AllAuthController::class , 'login'])->name('login.index');
 Route::get('auth/profile', [AllAuthController::class , 'profile'])->name('profile.index');
@@ -54,7 +49,7 @@ Route::get('auth/reset', [AllAuthController::class , 'reset'])->name('reset.inde
 Route::get('auth/forgot/password', [AllAuthController::class , 'forgotPassword'])->name('forgotPassword.index');
 Route::get('auth/setting/profile', [AllAuthController::class , 'settingProfile'])->name('settingProfile.index');
 
-// //* ROUTE FONCTION AUTH
+
 Route::post('register',[RegisterController::class , 'store'])->name('register.store');
 Route::get('login',[LoginController::class , 'store'])->name('login.store');
 Route::get('logout',[ProfileController::class , 'logout'])->name('profile.logout');
@@ -63,3 +58,8 @@ Route::post('reset-forgot-password',[ResetController::class , 'store'])->name('r
 Route::put('update/profile',[SettingProfileController::class , 'updateProfile'])->name('setting-profile.updateProfile');
 Route::put('update/password',[SettingProfileController::class , 'updatePassword'])->name('setting-profile.updatePassword');
 Route::delete('delete/profile',[SettingProfileController::class , 'destroyProfile'])->name('setting-profile.destroy');
+
+
+Route::delete('/delete/{id}/user',[UserController::class , 'destroy'])->name('user.destroy');
+Route::put('/update/role/{id}/user',[UserController::class , 'updateRole'])->name('role.update');
+
